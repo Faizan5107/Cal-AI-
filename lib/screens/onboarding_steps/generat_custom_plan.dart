@@ -1,0 +1,46 @@
+import 'package:flutter/cupertino.dart';
+
+import '../../widgets/title_widget.dart';
+
+class GenerateCustomPlan extends StatelessWidget {
+  final String title;
+  final String gif;
+
+  const GenerateCustomPlan({
+    super.key,
+    required this.title,
+    required this.gif,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 20,),
+            Image.asset(gif),
+
+            TitleWidget.heading(
+              title,
+              fontSize: 32,
+              align: TextAlign.center,
+            ),
+            
+
+            const Spacer(),
+
+
+
+
+
+
+            // const Spacer(),
+          ],
+        ),
+      ),
+    );
+  }
+}
